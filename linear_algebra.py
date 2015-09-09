@@ -54,3 +54,7 @@ def vector_sub(a, b):
 def dot(a, b):
     shape_diff_exception(a,b)
     return sum([a[x]*b[x] for x in range(len(a))])
+
+
+def vector_multiply(vect, scal):
+    return [x*scal for x in vect]
