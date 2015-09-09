@@ -58,3 +58,7 @@ def dot(a, b):
 
 def vector_multiply(vect, scal):
     return [x*scal for x in vect]
+
+
+def magnitude(vect):
+    return math.sqrt(sum([x**2 for x in vect]))
