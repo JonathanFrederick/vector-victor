@@ -30,6 +30,7 @@ def vector_sum(*args): #TODO
     total = args[0]
     for vect in args[1:]:
         total = vector_add(total, vect)
+        print(total)
     return total
 
 
@@ -68,7 +69,15 @@ def dot(a, b):
 
 
 def vector_multiply(vect, scal):
+    print(vect, scal)
     return [x*scal for x in vect]
+
+
+def vector_mean(*args):
+    total = args[0]
+    for vect in args[1:]:
+        total = vector_add(total, vect)
+    return [x/len(args) for x in total]
 
 
 def magnitude(vect):
