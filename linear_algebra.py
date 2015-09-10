@@ -13,7 +13,8 @@ def shape(thing):
 def shape_diff_exception(a, b):
     if shape(a) != shape(b):
         raise ShapeException("Vectors must be the same size")
-
+    else:
+        return True
 
 def vector_add(a, b):
     shape_diff_exception(a,b)
@@ -25,11 +26,21 @@ def vector_sub(a, b):
     return [a[x]-b[x] for x in range(len(a))]
 
 
-# def vector_sum(total, *args = None): #TODO
-#     if args = None:
-#         return total
-#     else:
-#         return vector_add(vector_sum)
+def vector_sum(*args): #TODO
+    total = args[0]
+    for vect in args[1:]:
+        total = vector_add(total, vect)
+    return total
+
+
+    #return vector_add(args[0], vector_sum([x for x in args[1:] if shape_diff_exception(args[0], x)]))
+
+    #return [vector_add(args[0],  x) for x in args[1:] if shape_diff_exception(args[0], args[x])]
+
+    # if args = None:
+    #     return total
+    # else:
+    #     return vector_add(vector_sum)
 
     # print(args)
     # print([shape(args[0]) for x in args])
@@ -48,7 +59,7 @@ def vector_sub(a, b):
     # else:
     #     ret = args
     #     print(ret)
-    #     return vector_add(args[0], vector_sum(zip(args)))
+    #     return vector_add(args[0], vector_sum((x for x in args)))
 
 
 def dot(a, b):
