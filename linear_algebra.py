@@ -79,6 +79,14 @@ def vector_mean(*args):
         total = vector_add(total, vect)
     return [x/len(args) for x in total]
 
-
+#
 def magnitude(vect):
     return math.sqrt(sum([x**2 for x in vect]))
+
+
+def matrix_row(matr, row):
+    return matr[row]
+
+
+def matrix_col(matr, col):
+    return [row[col] for row in matr]
