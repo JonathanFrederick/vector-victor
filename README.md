@@ -4,6 +4,26 @@
 
 Implement various vector and matrix math functions using no math libraries.
 
+## To Use
+1. Import linear_algebra
+2. Use functions in code as described
+  1. shape(vector): -> (size, )
+    takes a vector and returns its size
+  2. vector_add(vector_1, vector_2): -> vector
+    takes 2 vectors and returns their sum
+  3. vector_sub(vector_1, vector_2): -> vector
+    takes 2 vectors and returns their difference
+  4. vector_sum(...): -> vector
+    takes a number of vectors and returns their sum
+  5. dot(vector_1, vector_2): -> digit
+    takes 2 vectors and returns their dot product
+  6. vector_multiply(vector, scalar) -> vector
+    takes a vector and a scalar and returns the product
+  7. vector_mean(...) -> vector
+    takes a number of vectors and returns the mean
+  8. magnitude(vector) -> digit
+    takes a vector and returns its magnitude
+
 ## Tasks
 
 ```markdown
